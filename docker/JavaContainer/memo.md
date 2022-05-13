@@ -19,10 +19,22 @@ Dockerfileに慣れたいので、OpenjdkのコンテナにCOPYでGradleのzip�
 
 ### openjdk 11のイメージを使って、最低限のDockerfileを作る
 
-できた。
+-> できた。
 
 Javaのバージョンは、Dockerhubにあった11の最新版の11.0.15にした。
 
 
 ![最低限のDockerfileと確認](./ss/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202022-05-13%20225521.png)
+
+### コンテナを起動したままにする
+
+docker runだけでは落ちてしまうため、docker -itd xxx:yyy /bin/shを入れているが、面倒。
+
+docker runだけでも落ちなくなるよう、シェルスクリプトを用意してDockerfileでコピー＆実行してみる。
+
+-> できた。
+
+tail -f /dev/nullを実行するシェルスクリプトを用意して、Dockerfileを編集した。
+
+![コンテナが起動したままになる確認](./ss/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202022-05-13%20231450.png)
 
