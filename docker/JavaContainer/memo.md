@@ -135,4 +135,8 @@ Spring Initializerで、Dependencyに何も選ばないでプロジェクトを�
  -> implementation 'org.springframework.boot:spring-boot-starter-web'を有効にしたら、bootRun時点のエラーはなくなるが、http://localhost:8080にアクセスしてもWhitePageエラー（404）
 
  -> implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'を有効にしたら、画面が表示される。
+
+ ### v0.10のリリース
+
+ とりあえず、Javaの開発環境は作れたので、これをv0.10としてリリース。
 	
