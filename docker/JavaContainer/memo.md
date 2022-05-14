@@ -139,4 +139,20 @@ Spring Initializerで、Dependencyに何も選ばないでプロジェクトを�
  ### v0.10のリリース
 
  とりあえず、Javaの開発環境は作れたので、これをv0.10としてリリース。
-	
+
+### MySQLのDockerfile作成
+
+以下のURLが参考になった。なお、バージョンは8.0.22にする。
+[サンプルデータがあらかじめ入った MySQL を Docker で作成する](https://www.xlsoft.com/jp/blog/blog/2019/10/09/post-7617/)
+
+Dockerfileとdocker-compose.ymlで、どちらでどこまで設定するかの思想は人それぞれありそう。
+
+個人的には、言語設定やルートユーザのパスワードはDockerfile、そのほかの設定はdocker-compose.ymlとしたらわかりやすい。
+
+ -> できた。
+
+サンプルとして、参考URLの01_init_db.sqlや02_insert_data.sqlをそのまま使った。
+
+確認は、ホストPCのWindows10にもともとインストールしてあったMySQL Workbenchでした。
+
+MySQLのコンテナは以外とあっさり構築できた。
