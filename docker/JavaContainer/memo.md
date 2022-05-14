@@ -156,3 +156,8 @@ Dockerfileとdocker-compose.ymlで、どちらでどこまで設定するかの�
 確認は、ホストPCのWindows10にもともとインストールしてあったMySQL Workbenchでした。
 
 MySQLのコンテナは以外とあっさり構築できた。
+
+### v0.20のリリース
+
+MySQLの開発環境は作れたので、これをv0.20としてリリース。
+
