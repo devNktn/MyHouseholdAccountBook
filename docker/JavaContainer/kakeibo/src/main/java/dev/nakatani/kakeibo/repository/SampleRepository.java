@@ -14,13 +14,13 @@ public class SampleRepository {
     public Map<String, Object> findByZip(String zip){
         //SELECT文
         String query = "SELECT"
-            + " ID,"
-            + " Zip,"
-            + " Prefecture,"
-            + " City,"
-            + " Address"
-            + " FROM jpaddress.city"
-            + " WHERE Zip=?";
+            + " id,"
+            + " zip,"
+            + " prefecture,"
+            + " city,"
+            + " address"
+            + " FROM kakeibo.sample_city"
+            + " WHERE zip=?";
 
         //検索実行
         Map<String, Object> sampleMap = jdbcTemplate.queryForMap(query, zip);

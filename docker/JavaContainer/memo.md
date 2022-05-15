@@ -202,3 +202,9 @@ docker-compose.ymlで指定した13306で、ホストのWindows10のMySQL Workbe
 実際には、Docker内の同じネットワークにあるものは、もともとのポート番号でいい様子。
 
 Dockerのネットワークについて、勉強し直す必要がある。
+
+### MySQLサンプルのDB変更と永続化
+
+これまで、サンプルのDBについては、参考にしたサイトのjpaddressのまま使ってきたが、java-containerから接続できるMySQLのDBは1つらしいので、kakeiboに統合する。
+
+また、その過程でデータの永続化ができていなかったことに気づいたので、volumeでマウントして永続化もする。

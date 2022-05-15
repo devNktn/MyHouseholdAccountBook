@@ -19,9 +19,9 @@ public class SampleService {
         Map<String, Object> sampleMap = sampleRepository.findByZip(zip);
 
         // Mapから値を取得
-        String prefecture = (String) sampleMap.get("Prefecture");
-        String city = (String) sampleMap.get("City");
-        String address = (String) sampleMap.get("Address");
+        String prefecture = (String) sampleMap.get("prefecture");
+        String city = (String) sampleMap.get("city");
+        String address = (String) sampleMap.get("address");
         
         // RawDataクラスに値をセット
         SampleModel sampleModel = new SampleModel();
