@@ -214,3 +214,7 @@ Dockerのネットワークについて、勉強し直す必要がある。
 今更ながら、このmemo.mdがJavaContainer内にあることがおかしいので、最上位に持ってきた。
 
 あと、.gitignoreもJavaContainer/kakeiboにあるものを最上位に移動・修正した。
+
+### v0.30のリリース
+
+2つのコンテナをつなげて、SpringBootでMySQLのデータを取得するサンプルはできたので、これをv0.30としてリリース。
