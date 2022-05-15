@@ -161,3 +161,18 @@ MySQLのコンテナは以外とあっさり構築できた。
 
 MySQLの開発環境は作れたので、これをv0.20としてリリース。
 
+## 2022/05/15
+
+### docker-composeの統合
+
+JavaContainerとMySQLContainerのdocker-compose.ymlをまとめる。
+
+スモールステップで、まず目標は2つのコンテナとネットワークが起動するところまで。
+
+普通にまとめればいけそうな気がする。やったことは以下に記載。
+
+- 2つのdocker-compose.ymlをまとめて、重複するversion:3とservice:を削除
+- MySQLのサービス名を「mysql」から「mysql-server」に変更（ケアレスミスをついでに修正）
+- java-containerにdepends_on: mysql-serverを追記
+- フォルダやファイルの指定について、相対パスを修正
+- ネットワーク（kakeibo-net）を作って、そちらに接続
