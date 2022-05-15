@@ -176,3 +176,11 @@ JavaContainerとMySQLContainerのdocker-compose.ymlをまとめる。
 - java-containerにdepends_on: mysql-serverを追記
 - フォルダやファイルの指定について、相対パスを修正
 - ネットワーク（kakeibo-net）を作って、そちらに接続
+
+### MySQLについて、ユーザnktnに権限を付与するシェルスクリプトを追加
+
+MySQLの初期スクリプトでサンプルとして作っているjpaddressスキーマに、ユーザnktnではアクセスできないことが気になっていた。
+
+そこで、ユーザnktnに権限を設定するシェルスクリプトを追加してみる。
+
+ -> できた。MySQLContainer/initに01_give_full_privileges_to_mysql_user.shを追加した。
