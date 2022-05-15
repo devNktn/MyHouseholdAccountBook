@@ -184,3 +184,21 @@ MySQLの初期スクリプトでサンプルとして作っているjpaddressス
 そこで、ユーザnktnに権限を設定するシェルスクリプトを追加してみる。
 
  -> できた。MySQLContainer/initに01_give_full_privileges_to_mysql_user.shを追加した。
+
+### SpringBootとMySQLの接続確認
+
+SpringBootでMySQLのデータをとってこれるか確認。
+
+ -> できた。
+
+ただ、java-containerからmysql-containerへの接続ができず、かなりはまってしまった。
+
+結論として、application.propertiesのspring.datasource.urlが悪かった。
+
+ポートとして、13306を指定していたが、3306にすることで接続できた。
+
+docker-compose.ymlで指定した13306で、ホストのWindows10のMySQL Workbenchから接続できたので、完全に13306でいいと思っていた。
+
+実際には、Docker内の同じネットワークにあるものは、もともとのポート番号でいい様子。
+
+Dockerのネットワークについて、勉強し直す必要がある。

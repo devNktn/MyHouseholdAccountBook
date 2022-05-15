@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>DB</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <div class="contents">
+            <h1>Springboot MySQL Connect Sample</h1>
+            <table>
+                <tr>
+                    <td>郵便番号:</td>
+                    <td th:text="${sampleModel.zip}"></td>            
+                </tr>
+                <tr>
+                    <td>都道府県:</td>
+                    <td th:text="${sampleModel.prefecture}"></td>            
+                </tr>
+                <tr>
+                    <td>市区町村:</td>
+                    <td th:text="${sampleModel.city}"></td>            
+                </tr>
+                <tr>
+                    <td>住所:</td>
+                    <td th:text="${sampleModel.address}"></td>            
+                </tr>
+            </table>
+        </div>
+  </body>
+</html>
