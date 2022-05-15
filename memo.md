@@ -208,3 +208,9 @@ Dockerのネットワークについて、勉強し直す必要がある。
 これまで、サンプルのDBについては、参考にしたサイトのjpaddressのまま使ってきたが、java-containerから接続できるMySQLのDBは1つらしいので、kakeiboに統合する。
 
 また、その過程でデータの永続化ができていなかったことに気づいたので、volumeでマウントして永続化もする。
+
+### memo.mdの移動と.gitignoreの統合
+
+今更ながら、このmemo.mdがJavaContainer内にあることがおかしいので、最上位に持ってきた。
+
+あと、.gitignoreもJavaContainer/kakeiboにあるものを最上位に移動・修正した。
