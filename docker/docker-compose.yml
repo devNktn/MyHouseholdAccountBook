@@ -1,0 +1,38 @@
+version: "3"
+services:
+  java-container:
+    depends_on:
+      - mysql-container
+    ports:
+      - 18080:8080
+    build:
+      context: ./JavaContainer
+      dockerfile: Dockerfile
+    image: java-container:0.1
+    networks:
+      - kakeibo-net
+    volumes:
+      - ./JavaContainer/kakeibo:/usr/kakeibo
+  mysql-container:
+    environment:
+      MYSQL_USER: nktn
+      MYSQL_PASSWORD: mysql@devNktn
+      MYSQL_DATABASE: kakeibo
+      TZ: Asia/Tokyo
+    ports:
+      - 13306:3306
+    build:
+      context: ./MySQLContainer
+      dockerfile: Dockerfile
+    image: mysql-container:0.1
+    networks:
+      - kakeibo-net
+    volumes:
+      # 起動時に自動で実行されるスクリプトおよびSQLファイルをマウント
+      - ./MySQLContainer/init:/docker-entrypoint-initdb.d
+      # 実データの永続化
+      - ./MySQLContainer/data/lib:/var/lib/mysql
+      # logの永続化
+      - ./MySQLContainer/data/log:/var/log/mysql
+networks:
+  kakeibo-net:

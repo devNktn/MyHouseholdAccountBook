@@ -1,0 +1,10 @@
+# JavaContainer系
+docker/JavaContainer/kakeibo/.gradle
+docker/JavaContainer/kakeibo/.vscode
+docker/JavaContainer/kakeibo/build
+docker/JavaContainer/kakeibo/bin
+docker/JavaContainer/kakeibo/
+
+# MySQLContainer系
+docker/MySQLContainer/data/lib/*
+docker/MySQLContainer/data/log/*
