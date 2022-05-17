@@ -1,0 +1,50 @@
+@charset "UTF-8"; 
+html {
+	height:98%;
+	width: 99%;
+}
+body {
+	font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	font-size: 12px;
+	background-color: #FFFFFF;
+	width: 100%;
+	height: 100%;
+	overflow-wrap:break-word;
+	position:relative;
+}
+
+#overlay {
+	display: none;
+	width: 100%;
+	height:100%;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	color:#ffffff;
+	background: rgba(0,0,0,0.7);
+  text-align: center;
+}
+#overlay > *{
+    display:table-cell;
+    vertical-align: middle;
+}
+
+li {
+	margin-left:0px;
+	list-style-type: none;
+}
+
+input[readonly="readonly"] {
+	background-color: lightgray;
+	color: gray;
+}
+
+.error-form {
+	border : solid 2px red
+}
+
+.error-input {
+	color: #630015;
+	background-color: #ffd9e1;
+}
