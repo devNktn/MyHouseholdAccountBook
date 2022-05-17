@@ -14,4 +14,10 @@ public class TempController {
         return "temp/mytemplate";
     }
 
+    @RequestMapping(value = "/temp/content", method = RequestMethod.GET)
+    public String content(Model model) {
+        model.addAttribute("temp", "コンテンツです");
+        return "temp/content";
+    }
+
 }

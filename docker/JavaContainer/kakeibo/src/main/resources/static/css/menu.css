@@ -1,5 +1,5 @@
 @charset "UTF-8"; 
-div.menu {
+.menu {
 	width: 140px;
 	height: 100%;
 	float: left;
@@ -7,36 +7,26 @@ div.menu {
 	text-align: center;
 	padding-right: 1px;
 }
-div.menu div {
-	padding: 10px 0 10px 0;
+
+.menu div {
+	padding: 20px 0 20px 0;
 	width: 100%;
 }
-div.menu div:first-child {
-	padding: 20px 0 20px 0;
+
+.menu div:first-child {
+	padding: 30px 0 20px 0;
 }
-div.menu div.selected {
+
+.menu div.selected {
 	background-color: lightgreen;
 }
-div.menu div.hover {
+
+.menu div.hover {
 	background-color: #dbffdb;
 	cursor: pointer;
 }
-div.menu button {
-	width: 100px;
-}
-div.content {
-	padding: 18px;
-	margin-left: 140px;
-}
-div.contentA {
-	padding: 18px;
-	margin-left: 10px;
-}
 
-fieldset {
-	margin-bottom: 10px;
-	margin-right: 10px;
-}
-p {
-	margin-bottom: 10px;
+.menu button {
+	width: 100px;
+	padding: 5px 0 5px 0;
 }

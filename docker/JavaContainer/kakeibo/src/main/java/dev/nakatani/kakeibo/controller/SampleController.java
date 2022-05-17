@@ -28,4 +28,10 @@ public class SampleController {
         return "sample/db";
     }
 
+    @RequestMapping(value = "sample/contents", method = RequestMethod.GET)
+    public String contents(Model model) {
+        model.addAttribute("contents", "contents");
+        return "sample/contents";
+    }
+
 }

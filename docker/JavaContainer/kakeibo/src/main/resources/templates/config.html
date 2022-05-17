@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>My家計簿 - 設定確認</title>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" th:href="@{/css/base.css}">
+        <link type="text/css" rel="stylesheet" th:href="@{/css/menu.css}">
+    </head>
+    <body>
+        <header class="header" th:replace="temp/header :: header_fragment"></header>
+        <main>
+            <!-- th:replaceを使用して、 メニュー用のフラグメントを読込みます -->
+            <div class="menu" th:replace="temp/menu :: menu_fragment"></div>
+            <div class="config">
+                ここに各画面のコンテンツを記載します。
+            </div>
+        </main>
+    </body>
+</html>
